@@ -1,0 +1,93 @@
+body {
+    padding: 10px;
+}
+
+.listing {
+    border: 1px solid lightgray;
+    height: 230px;
+    margin: 0px 20px 20px 0px;
+    padding-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 5px;
+}
+
+img {
+    float: left;
+    width: 20vw;  
+    max-height: 200px;
+    min-width: 250px;
+    /* padding-top: 15px; */
+    margin: 5px 70px 15px 15px;
+    cursor: pointer;
+    object-fit: contain;
+}
+/* img {
+    float: left;
+    width: 15vw; 
+    max-height: 165px;
+    min-width: 160px;
+    padding-top: 15px;
+    margin: 15px 70px 15px 15px;
+    cursor: pointer;
+    object-fit: contain;
+} */
+
+
+.listing-item-gray {
+    color: gray;
+}
+
+.listing-item {
+    margin: 10px 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.listing > li > a { 
+    color: inherit;
+    text-decoration: none;
+} 
+
+.watchlist {
+    color: white;
+    background-color: #756f6e;
+}
+
+.author {
+    color:dodgerblue
+}
+
+.item-per-category {
+    color: black;
+}
+
+.create-listing {
+    width: 50%;
+}
+
+.description {
+    height: 10vh;
+    width: 95%;
+}
+
+.listing-page {
+    display: flex;
+}
+
+.img-in-listing {
+    width: 10%;
+    flex-grow: 1;
+}
+
+.auction-winner {
+    flex-grow: 2;
+    color: #345ceb;
+}
+
+.winner {
+    color: #4634eb;
+}
+

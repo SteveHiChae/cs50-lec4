@@ -1,0 +1,35 @@
+{% extends 'auctions/layout.html' %}
+
+{% block body %}
+
+    <h2>Watchlist</h2>
+    <ul>
+        {% for watchlist in watchlists %}
+            <!-- <div class="listing" data-location="{% url 'listing_page' listing_id=watchlist.item.id %}"> -->
+            <div class="listing">
+                {% if watchlist.item.photo %}
+                    <li><a href="{% url 'listing_page' listing_id=watchlist.item.id %}">
+                        <img src="{{watchlist.item.photo.url}}"></a></li>
+                {% else %}
+                    <li><a href="{% url 'listing_page' listing_id=watchlist.item.id %}"></a>
+                        <img src="data:," alt="No Image yet!"></li>
+                {% endif %}
+                <li class="listing-item"><a href="{% url 'listing_page' listing_id=watchlist.item.id %}">
+                    {{watchlist.item.title}}</a></li>
+                <li class="listing-item"><a href="{% url 'listing_page' listing_id=watchlist.item.id %}">
+                    {{watchlist.item.category}}</a></li>
+                <li class="listing-item"><a href="{% url 'listing_page' listing_id=watchlist.item.id %}">
+                    {{watchlist.item.price}}</a></li>
+                <li class="listing-item"><a href="{% url 'listing_page' listing_id=watchlist.item.id %}">
+                    {{watchlist.watcher}}</a></li>
+                <li class="listing-item-gray"><a href="{% url 'listing_page' listing_id=watchlist.item.id %}">
+                    Created {{watchlist.item.listing_datetime}}</a></li>
+                <li class="listing-item-gray"><a href="{% url 'listing_page' listing_id=watchlist.item.id %}">
+                    By {{watchlist.item.listed_by}}</a></li>
+        {% empty %}
+                <li>No watchlist!</li>
+            </div>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

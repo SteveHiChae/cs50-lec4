@@ -1,0 +1,92 @@
+{% extends 'auctions/layout.html' %}
+
+{% block body %}
+    <h3>Listing: {{listing.title}}</h3>
+    {% if listing.watchlist == "YES" %}
+        <span class="watchlist">Watchlist</span>
+    {% endif %}
+
+    <div class="listing-page">
+        <ul>
+            {% if listing.photo %}
+                <li><img src="{{listing.photo.url}}"></li>
+            {% else %}
+                <li><img src="data:," alt="No Image yet!"></li>
+            {% endif %}
+            <li class="listing-item">Title: {{listing.title}}</li>
+            <li class="listing-item">Price: ${{listing.price}}</li>
+            <!-- <li >Active Listing: {{listing.active_listing}}</li> -->
+            <!-- <li class="listing-item">Watchlist: {{listing.watchlist}}</li> -->
+        </ul>
+        {% if user.is_authenticated %}
+            <form action="{% url 'create_bid_comment_watchlist' listing_id=listing.id %}" method="POST">
+                {% csrf_token %}
+                <label for="bid">Starting bid: <strong>US ${{listing.starting_bid}}</strong></label><br>
+                {{number_of_bids}} bid(s) so far. {{current_bidder}}<br>
+                Enter more than $
+                <input type="number" name="bid" id="bid" 
+                    min="{{bid_price}}" max="999999" step="0.01" 
+                    value="{{bid_price}}" placeholder="Bid">
+
+                <button class="btn btn-primary" name="placebid">Place bid</button><br>
+                {% if watchlist_count == 0 %}
+                    <button class="btn btn-primary" name="add-watchlist">🤍 Add to Watchlist</button><br>
+                {% else %}
+                    <button class="btn btn-primary" name="remove-watchlist">💔 Remove from Watchlist</button>
+                {% endif %}
+                {% if close_auction_btn == "YES" %}
+                    <button class="btn btn-primary" name="close-auction">Close Auction</button>
+                {% endif %}
+            </form>
+        {% else %}
+            Starting bid: <strong>US ${{listing.starting_bid}}</strong><br>
+            Current bid: <strong>US ${{bid_price}}</strong>
+        {% endif %}
+    </div>
+
+    <div>
+        <hr>
+        <h3>Details</h3>
+        <ul>
+            <li class="listing-item">Listed by: {{listing.listed_by}}</li>
+            <li class="listing-item">Description: {{listing.description}}</li>
+            <li class="listing-item">Category: {{listing.get_category_display}}</li>
+            <li class="listing-datetime">Created {{listing.listing_datetime}}</li>
+        </ul>
+    </div>
+
+    <div>
+        <hr>
+
+        <h3>Comments</h3>
+        <ul>
+            <hr>
+            {% for comment in comments %}
+                <li>{{comment.comment}}</li>
+                <li><span class='author'>- {{comment.author}}</span> {{comment.created_date}}</li>
+                <hr>
+            {% empty %}
+                <li>No comment yet!</li>
+            {% endfor %}
+        </ul>
+
+        {% if user.is_authenticated %}
+            <form action="{% url 'create_bid_comment_watchlist' listing_id=listing.id %}" method="post">
+                {% csrf_token %}
+                <label for="item-comment">Your comment</label><br>
+                <textarea name="your-comment" id="item-comment" cols="40" rows="10"></textarea><br>
+                <button class="btn btn-primary" name="add-comment">Post Your Comment</button>
+            </form>
+        {% endif %}
+    </div>
+
+    <div>
+        <br>
+        <a href="{% url 'index' %}">Back to Active Listings</a>
+        {% if message %}
+            <li>{{message}}</li>
+        {% endif %}
+    </div>
+
+
+{% endblock %}

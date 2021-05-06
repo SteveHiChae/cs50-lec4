@@ -1,0 +1,1465 @@
+[
+{
+  "model": "sessions.session",
+  "pk": "3pman7xoovjw5l2dfhetkyvj7avh2uu6",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGllrx19Kes5g7fqDA8iW4qRC3B0ipYD2zcx7sYDbWsM28hLmxM5MstPvRhgfue0g3bHdOo-9rctMfFf4QQe_9pSfl8P9O6g46reenAZphJWUjQBTMGmSBYQmr8B5BIPGweRtTMKBJ2cnJYTU2RclDSF7fwCs0jZ6:1lY6up:8v6lGcXQolqP8og8UvfWrlRG-YkMBQkxI-Ny5FAoCQo",
+    "expire_date": "2021-05-02T12:52:43.529Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "8ucqszcxkkti1ps27rtk9rco4pm7knek",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGllrx19Kes5g7fqDA8iW4qRC3B0ipYD2zcx7sYDbWsM28hLmxM5MstPvRhgfue0g3bHdOo-9rctMfFf4QQe_9pSfl8P9O6g46reenAZphJWUjQBTMGmSBYQmr8B5BIPGweRtTMKBJ2cnJYTU2RclDSF7fwCs0jZ6:1laB7Y:PxVWEQtvUwa2NaFj34rluH5J72E-rwvcROxnHmSItvM",
+    "expire_date": "2021-05-08T05:46:24.880Z"
+  }
+},
+{
+  "model": "auctions.user",
+  "fields": {
+    "password": "pbkdf2_sha256$216000$LN17Q1YJLqT8$htfrPxENrZT7nbNBXlrvo4m9OsJRh0QM0fx+I7BuuM4=",
+    "last_login": "2021-04-24T05:46:24.877Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "Steve",
+    "last_name": "Chae",
+    "email": "admin@example.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2021-04-15T05:50:30Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auctions.user",
+  "fields": {
+    "password": "pbkdf2_sha256$216000$deLXIjvb0hEZ$xlM9eIOmojf01X8QPrgw1tuTdafysdGQR8UE1x29YK8=",
+    "last_login": "2021-04-19T21:51:01Z",
+    "is_superuser": false,
+    "username": "Pilip",
+    "first_name": "Pilip",
+    "last_name": "Chae",
+    "email": "pilipchae@example.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2021-04-15T06:17:00Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auctions.user",
+  "fields": {
+    "password": "pbkdf2_sha256$216000$89smy1GkZ88g$8c4aDczkEFbyvfo5ZFXvAVN/m8zD4sfdGQswBazYMc0=",
+    "last_login": "2021-04-23T01:53:57.351Z",
+    "is_superuser": false,
+    "username": "harry",
+    "first_name": "Harry",
+    "last_name": "Potter",
+    "email": "harrypotter@example.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2021-04-19T22:50:09Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auctions.listing",
+  "pk": 1,
+  "fields": {
+    "title": "Invisible Cloak",
+    "category": "TOY",
+    "description": "The famous invisible cloak is on the market. It's real or fake?  It's on the fierce debate now.",
+    "price": "2000.0",
+    "photo": "images/Invisible_Cloak1.jpg",
+    "active_listing": "YES",
+    "listed_by": [
+      "admin"
+    ],
+    "listing_datetime": "2021-04-17T00:21:37.886Z",
+    "watchlist": "YES",
+    "starting_bid": "110.0"
+  }
+},
+{
+  "model": "auctions.listing",
+  "pk": 2,
+  "fields": {
+    "title": "Broomstick",
+    "category": "COLTBLE",
+    "description": null,
+    "price": "100.5",
+    "photo": "images/broomstick.jpg",
+    "active_listing": "YES",
+    "listed_by": [
+      "admin"
+    ],
+    "listing_datetime": "2021-04-17T00:31:15.990Z",
+    "watchlist": "YES",
+    "starting_bid": "20.0"
+  }
+},
+{
+  "model": "auctions.listing",
+  "pk": 3,
+  "fields": {
+    "title": "iMac",
+    "category": "ELECTRO",
+    "description": null,
+    "price": "1500.0",
+    "photo": "images/iMac.jpg",
+    "active_listing": "YES",
+    "listed_by": [
+      "admin"
+    ],
+    "listing_datetime": "2021-04-17T00:32:17.317Z",
+    "watchlist": "NO",
+    "starting_bid": "1.0"
+  }
+},
+{
+  "model": "auctions.listing",
+  "pk": 4,
+  "fields": {
+    "title": "MacBook Air",
+    "category": "TOY",
+    "description": null,
+    "price": "50.0",
+    "photo": "images/MacBookAir.jpg",
+    "active_listing": "YES",
+    "listed_by": [
+      "admin"
+    ],
+    "listing_datetime": "2021-04-17T00:56:14.826Z",
+    "watchlist": "NO",
+    "starting_bid": "1.0"
+  }
+},
+{
+  "model": "auctions.listing",
+  "pk": 5,
+  "fields": {
+    "title": "MacBook Pro",
+    "category": "TOY",
+    "description": null,
+    "price": "30.0",
+    "photo": "images/MacBookPro.jpg",
+    "active_listing": "YES",
+    "listed_by": [
+      "admin"
+    ],
+    "listing_datetime": "2021-04-17T01:05:53.288Z",
+    "watchlist": "NO",
+    "starting_bid": "2.0"
+  }
+},
+{
+  "model": "auctions.listing",
+  "pk": 6,
+  "fields": {
+    "title": "Buffet R13",
+    "category": "TOY",
+    "description": null,
+    "price": "3085.0",
+    "photo": "images/Buffet_R13.jpg",
+    "active_listing": "YES",
+    "listed_by": [
+      "admin"
+    ],
+    "listing_datetime": "2021-04-17T07:39:18.806Z",
+    "watchlist": "YES",
+    "starting_bid": "1.0"
+  }
+},
+{
+  "model": "auctions.listing",
+  "pk": 7,
+  "fields": {
+    "title": "new iMac",
+    "category": "ELECTRO",
+    "description": "2020 New iMac Series",
+    "price": "2000.0",
+    "photo": "images/iMacNew.jpg",
+    "active_listing": "YES",
+    "listed_by": [
+      "admin"
+    ],
+    "listing_datetime": "2021-04-23T02:21:40.971Z",
+    "watchlist": "NO",
+    "starting_bid": "1.0"
+  }
+},
+{
+  "model": "auctions.bid",
+  "pk": 1,
+  "fields": {
+    "bidder": [
+      "admin"
+    ],
+    "item": 1,
+    "price": "100.0",
+    "bidding_datetime": "2021-04-19T13:18:50.774Z"
+  }
+},
+{
+  "model": "auctions.bid",
+  "pk": 2,
+  "fields": {
+    "bidder": [
+      "Pilip"
+    ],
+    "item": 1,
+    "price": "200.0",
+    "bidding_datetime": "2021-04-19T13:19:16.046Z"
+  }
+},
+{
+  "model": "auctions.bid",
+  "pk": 3,
+  "fields": {
+    "bidder": [
+      "harry"
+    ],
+    "item": 1,
+    "price": "200.0",
+    "bidding_datetime": "2021-04-19T22:53:18.441Z"
+  }
+},
+{
+  "model": "auctions.bid",
+  "pk": 4,
+  "fields": {
+    "bidder": [
+      "admin"
+    ],
+    "item": 1,
+    "price": "205.0",
+    "bidding_datetime": "2021-04-20T05:59:37.471Z"
+  }
+},
+{
+  "model": "auctions.bid",
+  "pk": 5,
+  "fields": {
+    "bidder": [
+      "harry"
+    ],
+    "item": 1,
+    "price": "206.0",
+    "bidding_datetime": "2021-04-20T05:59:59.693Z"
+  }
+},
+{
+  "model": "auctions.bid",
+  "pk": 6,
+  "fields": {
+    "bidder": [
+      "admin"
+    ],
+    "item": 1,
+    "price": "210.0",
+    "bidding_datetime": "2021-04-20T06:00:11.075Z"
+  }
+},
+{
+  "model": "auctions.bid",
+  "pk": 7,
+  "fields": {
+    "bidder": [
+      "harry"
+    ],
+    "item": 1,
+    "price": "210.0",
+    "bidding_datetime": "2021-04-20T06:00:23.726Z"
+  }
+},
+{
+  "model": "auctions.bid",
+  "pk": 8,
+  "fields": {
+    "bidder": [
+      "harry"
+    ],
+    "item": 1,
+    "price": "210.5",
+    "bidding_datetime": "2021-04-21T05:16:04.599Z"
+  }
+},
+{
+  "model": "auctions.bid",
+  "pk": 9,
+  "fields": {
+    "bidder": [
+      "harry"
+    ],
+    "item": 1,
+    "price": "215.0",
+    "bidding_datetime": "2021-04-21T07:46:00.703Z"
+  }
+},
+{
+  "model": "auctions.bid",
+  "pk": 10,
+  "fields": {
+    "bidder": [
+      "harry"
+    ],
+    "item": 6,
+    "price": "1.0",
+    "bidding_datetime": "2021-04-22T11:26:38.033Z"
+  }
+},
+{
+  "model": "auctions.bid",
+  "pk": 13,
+  "fields": {
+    "bidder": [
+      "harry"
+    ],
+    "item": 2,
+    "price": "20.0",
+    "bidding_datetime": "2021-04-23T01:21:04.325Z"
+  }
+},
+{
+  "model": "auctions.watchlist",
+  "pk": 3,
+  "fields": {
+    "watcher": [
+      "admin"
+    ],
+    "item": 6
+  }
+},
+{
+  "model": "auctions.watchlist",
+  "pk": 4,
+  "fields": {
+    "watcher": [
+      "admin"
+    ],
+    "item": 1
+  }
+},
+{
+  "model": "auctions.watchlist",
+  "pk": 5,
+  "fields": {
+    "watcher": [
+      "harry"
+    ],
+    "item": 1
+  }
+},
+{
+  "model": "auctions.watchlist",
+  "pk": 6,
+  "fields": {
+    "watcher": [
+      "harry"
+    ],
+    "item": 2
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2021-04-17T00:32:17.319Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "3",
+    "object_repr": "Listing object (3)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2021-04-17T08:50:32.128Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "1",
+    "object_repr": "Listing object (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2021-04-17T10:09:42.058Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "1",
+    "object_repr": "Listing object (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2021-04-17T10:10:26.305Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "1",
+    "object_repr": "Listing object (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2021-04-17T10:12:47.715Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "1",
+    "object_repr": "Listing object (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2021-04-17T10:14:09.995Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "2",
+    "object_repr": "Listing object (2)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2021-04-17T10:49:48.254Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "4",
+    "object_repr": "Listing object (4)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2021-04-17T22:54:21.482Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "6",
+    "object_repr": "Listing object (6)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Price\", \"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2021-04-17T23:41:24.844Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "3",
+    "object_repr": "Listing object (3)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Active listing\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2021-04-17T23:41:48.267Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "4",
+    "object_repr": "Listing object (4)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Active listing\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2021-04-17T23:42:24.345Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "5",
+    "object_repr": "Listing object (5)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Active listing\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2021-04-18T02:31:57.115Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "5",
+    "object_repr": "Listing object (5)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Photo\", \"Active listing\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2021-04-18T02:45:01.824Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "1",
+    "object_repr": "Listing object (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2021-04-18T08:18:13.901Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "1",
+    "object_repr": "Listing object (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2021-04-18T11:17:18.703Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "1",
+    "object_repr": "Listing object (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2021-04-18T12:41:49.763Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "user"
+    ],
+    "object_id": "1",
+    "object_repr": "harry",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2021-04-18T12:44:42.535Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "user"
+    ],
+    "object_id": "1",
+    "object_repr": "harry",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2021-04-18T12:48:09.169Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "user"
+    ],
+    "object_id": "1",
+    "object_repr": "harry",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2021-04-18T12:51:34.909Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "user"
+    ],
+    "object_id": "1",
+    "object_repr": "harry",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Superuser status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2021-04-18T12:53:06.142Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "user"
+    ],
+    "object_id": "1",
+    "object_repr": "harry",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2021-04-18T13:42:22.147Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "1",
+    "object_repr": "Listing object (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Starting bid\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2021-04-19T03:54:03.427Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "1",
+    "object_repr": "Listing object (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Listed by\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2021-04-19T03:54:30.898Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "2",
+    "object_repr": "Listing object (2)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Listed by\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2021-04-19T03:54:56.469Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "3",
+    "object_repr": "Listing object (3)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Listed by\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2021-04-19T03:55:16.825Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "4",
+    "object_repr": "Listing object (4)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Listed by\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2021-04-19T03:55:25.139Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "5",
+    "object_repr": "Listing object (5)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Listed by\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2021-04-19T03:55:33.336Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "6",
+    "object_repr": "Listing object (6)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Listed by\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2021-04-19T11:08:54.459Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "user"
+    ],
+    "object_id": "3",
+    "object_repr": "Pilip",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2021-04-19T13:18:50.775Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "bid"
+    ],
+    "object_id": "1",
+    "object_repr": "Bid object (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2021-04-19T13:19:00.509Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "bid"
+    ],
+    "object_id": "1",
+    "object_repr": "Bid object (1)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2021-04-19T13:19:16.048Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "bid"
+    ],
+    "object_id": "2",
+    "object_repr": "Bid object (2)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2021-04-19T22:50:48.364Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "user"
+    ],
+    "object_id": "4",
+    "object_repr": "harry",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2021-04-19T22:53:18.442Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "bid"
+    ],
+    "object_id": "3",
+    "object_repr": "Bid object (3)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2021-04-20T05:59:37.472Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "bid"
+    ],
+    "object_id": "4",
+    "object_repr": "Bid object (4)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2021-04-20T05:59:59.694Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "bid"
+    ],
+    "object_id": "5",
+    "object_repr": "Bid object (5)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2021-04-20T06:00:11.077Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "bid"
+    ],
+    "object_id": "6",
+    "object_repr": "Bid object (6)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2021-04-20T06:00:23.727Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "bid"
+    ],
+    "object_id": "7",
+    "object_repr": "Bid object (7)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2021-04-21T22:00:04.152Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "1",
+    "object_repr": "Listing object (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2021-04-21T23:22:57.550Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "1",
+    "object_repr": "Listing object (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Active listing\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2021-04-21T23:26:40.614Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "bid"
+    ],
+    "object_id": "9",
+    "object_repr": "Bid object (9)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Bidder\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2021-04-21T23:42:07.910Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "1",
+    "object_repr": "Listing object (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Active listing\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2021-04-21T23:45:01.439Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "1",
+    "object_repr": "Listing object (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Active listing\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2021-04-21T23:45:45.121Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "1",
+    "object_repr": "Listing object (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Active listing\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2021-04-21T23:47:05.948Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "1",
+    "object_repr": "Listing object (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Active listing\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2021-04-21T23:51:27.438Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "1",
+    "object_repr": "Listing object (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Active listing\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2021-04-22T01:47:12.833Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "1",
+    "object_repr": "Listing object (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Active listing\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2021-04-22T07:18:16.396Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "user"
+    ],
+    "object_id": "3",
+    "object_repr": "Pilip",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2021-04-22T07:18:30.325Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "user"
+    ],
+    "object_id": "2",
+    "object_repr": "admin",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2021-04-22T10:51:38.442Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "1",
+    "object_repr": "Listing object (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Active listing\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2021-04-23T00:30:20.639Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "4",
+    "object_repr": "Listing object (4)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2021-04-23T01:56:30.100Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "bid"
+    ],
+    "object_id": "12",
+    "object_repr": "Bid object (12)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2021-04-23T01:56:39.542Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "bid"
+    ],
+    "object_id": "11",
+    "object_repr": "Bid object (11)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2021-04-23T02:10:25.539Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "5",
+    "object_repr": "Listing object (5)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Active listing\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2021-04-23T02:10:53.441Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "4",
+    "object_repr": "Listing object (4)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Active listing\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2021-04-23T02:11:01.710Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "3",
+    "object_repr": "Listing object (3)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Active listing\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2021-04-23T02:18:14.498Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "3",
+    "object_repr": "Listing object (3)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Price\", \"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2021-04-23T02:19:56.724Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "4",
+    "object_repr": "Listing object (4)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2021-04-23T02:20:29.133Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "5",
+    "object_repr": "Listing object (5)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2021-04-23T02:21:40.973Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "7",
+    "object_repr": "Listing object (7)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2021-04-23T02:32:03.375Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "7",
+    "object_repr": "Listing object (7)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2021-04-23T03:05:20.423Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auctions",
+      "listing"
+    ],
+    "object_id": "7",
+    "object_repr": "Listing object (7)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Listed by\"]}}]"
+  }
+}
+]

@@ -1,0 +1,41 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2>Closed Listings</h2>
+    <ul>
+        {% for listing in listings %}
+            <div class="listing">
+                {% if listing.photo %}
+                    <li><a href="{% url 'closed_listing_page' listing_id=listing.id %}">
+                        <img src="{{listing.photo.url}}"></a></li>
+                {% else %}
+                    <li><a href="{% url 'closed_listing_page' listing_id=listing.id %}">
+                        <img src="data:," alt="No Image yet!"></a></li>
+                {% endif %}
+                <li class="listing-item">
+                    <a href="{% url 'closed_listing_page' listing_id=listing.id %}">
+                    {{listing.title}}</a></li>
+                <li class="listing-item">
+                    <a href="{% url 'closed_listing_page' listing_id=listing.id %}">
+                    {{listing.catetory}}</a></li>
+                {% if listing.description is not None %}
+                    <li class="listing-item">
+                        <a href="{% url 'closed_listing_page' listing_id=listing.id %}">
+                        Description: {{listing.description}}</a></li>
+                {% endif %}
+                <li class="listing-item">
+                    <a href="{% url 'closed_listing_page' listing_id=listing.id %}">
+                    Price: ${{listing.price}}</a></li>
+                <li class="listing-item">
+                    <a href="{% url 'closed_listing_page' listing_id=listing.id %}">
+                    {{listing.wastchlist}}</a></li>
+                <li class="listing-item-gray">
+                    <a href="{% url 'closed_listing_page' listing_id=listing.id %}">
+                    Created {{listing.listing_datetime}}</a></li>
+                <br>
+            </div>
+        {% empty %}
+            <li>No closed listings!</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends 'auctions/layout.html' %}
+
+{% block body %}
+    <h3>Listing: {{listing.title}}</h3>
+
+    <div class="listing-page">
+
+        <div class="img-in-listing">
+            <ul>
+                {% if listing.photo %}
+                    <li><img src="{{listing.photo.url}}"></li>
+                {% else %}
+                    <li><img src="data:," alt="No Image yet!"></li>
+                {% endif %}
+            </ul>
+        </div>
+
+        <div class='auction-winner'>
+            <ul>
+                <li>Price: <strong>${{listing.price}}</strong></li>
+                <li>Starting bid: <strong>US ${{listing.starting_bid}}</strong></li>
+                <hr>
+                <li>Number of bids: <strong>{{number_of_bids}}</strong></li>
+                <li>Highest bid: <strong>US ${{highest_bid.price}}</strong><br> </li>
+                <li>Winner: <strong>{{winner_username}}</strong></li>
+                {% if user.is_authenticated %}
+                    {% if user.username == winner_username %}
+                        <br>
+                        <li class='winner'><strong> Congrats! You are the winner!</strong></li>
+                    {% endif %}
+                {% endif %}
+            </ul>
+        </div>
+
+    </div>
+
+    <div>
+        <hr>
+        <h3>Details</h3>
+        <ul>
+            <li class="listing-item">Listed by: {{listing.listed_by}}</li>
+            <li class="listing-item">Description: {{listing.description}}</li>
+            <li class="listing-item">Category: {{listing.get_category_display}}</li>
+            <li class="listing-datetime">Created {{listing.listing_datetime}}</li>
+        </ul>
+    </div>
+
+    <div>
+        <hr><h3>Comments</h3>
+        <ul>
+            <hr>
+            {% for comment in comments %}
+                <li>{{comment.comment}}</li>
+                <li><span class='author'>- {{comment.author}}</span> {{comment.created_date}}</li>
+                <hr>
+            {% empty %}
+                <li>No comment.</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div>
+        <a href="{% url 'index' %}">Back to Active Listings</a>
+        {% if message %}
+            <li>{{message}}</li>
+        {% endif %}
+    </div>
+
+
+{% endblock %}

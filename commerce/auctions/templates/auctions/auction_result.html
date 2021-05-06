@@ -1,0 +1,14 @@
+{% extends 'auctions/layout.html' %}
+
+{% block body %}
+    <h2>Auction Closed</h2>
+
+    <ul>
+        <li>Winner : {{ winner_username }}</li>
+        <li>Price : {{ winner_price }}</li>
+        <li>Item : {{ winner_item.title }}</li>
+    </ul>
+
+    <a href="{% url 'index'  %}">Back to Active Listings</a>
+
+{% endblock %}
