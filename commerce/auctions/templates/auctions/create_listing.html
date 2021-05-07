@@ -2,19 +2,22 @@
 
 {% block body %}
 
-    <h2>Create a New Listing</h2>
+    <h3>Create a New Listing</h3>
 
     <form action="{% url 'create_listing' %}" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
-        <table border="1" class="create-listing">
+        <table class="create-listing">
             {{ form }}
         </table>
         <input class="btn btn-primary" type="submit">    
     </form>
 
-    <div>
-        {% if message %}
-            {{ message }}
-        {% endif %}
-    </div>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
 {% endblock %}

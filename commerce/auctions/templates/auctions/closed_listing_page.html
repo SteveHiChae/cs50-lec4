@@ -7,6 +7,9 @@
 
         <div class="img-in-listing">
             <ul>
+                {% if listing.active_listing == "NO" %}
+                <span class="watchlist">Closed</span>
+                {% endif %}
                 {% if listing.photo %}
                     <li><img src="{{listing.photo.url}}"></li>
                 {% else %}
@@ -65,6 +68,5 @@
             <li>{{message}}</li>
         {% endif %}
     </div>
-
 
 {% endblock %}

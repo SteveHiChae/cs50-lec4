@@ -12,6 +12,7 @@ from django.db.models import Count
 from .models import *
 from .forms import *
 from . import utils
+from django.contrib import messages
 
 def index(request):
     listings = Listing.objects.filter(active_listing="YES")
@@ -167,34 +168,36 @@ def watchlist(request):
 def create_listing(request):
 
     if not request.user.is_authenticated: 
-        message = "Invalid credentials"
+        message.error(request, "Invalid credentials")
         return HttpResponseRedirect(reverse("index"))
 
     if request.method == "POST":
-        listing_form = ListingForm(request.POST, request.FILES) 
-        if listing_form.is_valid():
-            listing_form.save()
-            message = "Successfly saved!"
-        else:
-            message = "Value is not valid!"
+        user = User.objects.get(pk=request.user.id)
+        form = ListingForm(request.POST, request.FILES)
 
-        return render(request, "auctions/create_listing.html", {
-            "message": message,
-            "watchlist_count": utils.get_watchlist_count(request)
-        })
+        if form.is_valid():
+            listing = form.save(commit=False)
+            listing.listed_by = request.user
+            listing.save()
+            messages.success(request, 'Changes successfully saved.')
+        else:
+            messages.error(request, listing_form.errors) 
+
+        return HttpResponseRedirect(reverse('create_listing'))
 
     else:
-        listing_form = ListingForm()        
+        form = ListingForm()        
         return render(request, "auctions/create_listing.html", {
-            "form": listing_form,
+            "form": form,
             "watchlist_count": utils.get_watchlist_count(request)
         })
+    
 
 def listing_page(request, listing_id):
     listing = Listing.objects.get(pk=listing_id)
 
     number_of_bids = Bid.objects.filter(item=listing).count()
-    current_bidder = "" # default
+    current_bidder = "" 
     if number_of_bids == 0:
         highest_bid = listing.starting_bid
         bid_price = listing.starting_bid 
@@ -204,7 +207,7 @@ def listing_page(request, listing_id):
 
     if request.user.is_authenticated:
         user = User.objects.get(pk=request.user.id)
-        watchlist_count = Watchlist.objects.filter(watcher=user.id, item=listing).count()
+        is_watchlist = Watchlist.objects.filter(watcher=user.id, item=listing).count()
 
         if number_of_bids > 1:
             if highest_bid.bidder.id == request.user.id:
@@ -214,19 +217,22 @@ def listing_page(request, listing_id):
 
         if user.id == listing.listed_by.id:
             close_auction_btn = "YES" 
+            watchlist_btn = "NO"
         else:
             close_auction_btn = "NO"
+            watchlist_btn = "YES"
 
         comments = Comment.objects.filter(item=listing)
 
         return render(request, "auctions/listing_page.html", {
             "listing": listing,
             "bid_price": bid_price,
-            "watchlist_count": watchlist_count,
+            "is_watchlist": is_watchlist,
             "number_of_bids": number_of_bids,
             "highest_bid": highest_bid,
             "current_bidder": current_bidder,
             "close_auction_btn": close_auction_btn,
+            "watchlist_btn": watchlist_btn,
             "comments": comments,
             "watchlist_count": utils.get_watchlist_count(request)
         })
@@ -249,7 +255,7 @@ def create_bid_comment_watchlist(request, listing_id):
 
     if request.method == "POST":
 
-        if 'placebid' in request.POST:
+        if 'place-bid' in request.POST:
             highest_bid = Bid.objects.filter(item=listing).values('price').order_by('-price').first()
             if not highest_bid: # no bidding yet
                 highest_bid = 0
@@ -258,7 +264,7 @@ def create_bid_comment_watchlist(request, listing_id):
 
             bid_price = Decimal(request.POST['bid'])
             if bid_price < highest_bid: 
-                message = "Please enter more then ..." + str(highest_bid)
+                message = "Please enter more than ..." + str(highest_bid)
             else:
                 # bid = Bid.objects.create(price=bid_price, bidder=user, item=listing)
                 bid = Bid(price=bid_price, bidder=user, item=listing)
@@ -316,7 +322,8 @@ def create_bid_comment_watchlist(request, listing_id):
 def closed_listing(request):
     listings = Listing.objects.filter(active_listing="NO")
     return render(request, "auctions/closed_listing.html", {
-        "listings": listings
+        "listings": listings,
+        "watchlist_count": utils.get_watchlist_count(request) 
     })
 
 def closed_listing_page(request, listing_id):
@@ -340,4 +347,5 @@ def closed_listing_page(request, listing_id):
         "highest_bid": highest_bid,
         "winner_username": winner_username,
         "comments": comments,
+        "watchlist_count": utils.get_watchlist_count(request) 
     })

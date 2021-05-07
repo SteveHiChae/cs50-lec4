@@ -2,6 +2,7 @@ from .models import *
 from django.http import HttpResponse, HttpResponseRedirect
 
 def get_watchlist_count(request):
+    # sum of watchlist items
     listing = Listing.objects.filter(active_listing="YES")    
     if request.user.is_authenticated:
         user = User.objects.get(pk=request.user.id)

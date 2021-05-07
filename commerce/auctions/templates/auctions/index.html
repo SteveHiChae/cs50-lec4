@@ -1,10 +1,16 @@
 {% extends "auctions/layout.html" %}
 
 {% block body %}
-    <h2>Active Listings</h2>
+    <h3>Active Listings</h3>
     <ul>
         {% for listing in listings %}
             <div class="listing">
+                {% if listing.watchlist == "YES" %}
+                    <li class="listing-item-gray">
+                        <a href="{% url 'listing_page' listing_id=listing.id %}">
+                        <span class="watchlist">Watchlist</span></a></li>
+                {% endif %}
+
                 {% if listing.photo %}
                     <li><a href="{% url 'listing_page' listing_id=listing.id %}">
                         <img src="{{listing.photo.url}}"></a></li>
@@ -12,31 +18,38 @@
                     <li><a href="{% url 'listing_page' listing_id=listing.id %}">
                         <img src="data:," alt="No Image yet!"></a></li>
                 {% endif %}
+
+
                 <li class="listing-item">
                     <a href="{% url 'listing_page' listing_id=listing.id %}">
                     {{listing.title}}</a></li>
+
                 <li class="listing-item">
                     <a href="{% url 'listing_page' listing_id=listing.id %}">
                     {{listing.catetory}}</a></li>
-                <!-- <li>Price: ${{listing.price | stringformat:".2f"}}</li> -->
-                <!-- No need stringformat. It handled by settings values like this.
-                     USE_THOUSAND_SEPARATOR = True
-                     THOUSAND_SEPARATOR = True
-                     in settings.py  -->
+
                 {% if listing.description is not None %}
                     <li class="listing-item">
                         <a href="{% url 'listing_page' listing_id=listing.id %}">
                         Description: {{listing.description}}</a></li>
                 {% endif %}
+
                 <li class="listing-item">
                     <a href="{% url 'listing_page' listing_id=listing.id %}">
                     Price: ${{listing.price}}</a></li>
-                <li class="listing-item">
-                    <a href="{% url 'listing_page' listing_id=listing.id %}">
-                    {{listing.wastchlist}}</a></li>
+
+                <!-- <li>Price: ${{listing.price | stringformat:".2f"}}</li> -->
+                <!-- No need stringformat. It handled by settings values like this.
+                     USE_THOUSAND_SEPARATOR = True
+                     THOUSAND_SEPARATOR = True
+                     in settings.py  -->
+
                 <li class="listing-item-gray">
                     <a href="{% url 'listing_page' listing_id=listing.id %}">
                     Created {{listing.listing_datetime}}</a></li>
+
+                <li class="listing-item-gray"><a href="{% url 'listing_page' listing_id=listing.id %}">
+                    By {{listing.listed_by}}</a></li>
                 <br>
             </div>
         {% empty %}
