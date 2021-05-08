@@ -16,10 +16,12 @@ from django.contrib import messages
 
 def index(request):
     listings = Listing.objects.filter(active_listing="YES")
+    num_watchers = Watchlist.objects.values('item').annotate(Count('item'))
 
     return render(request, "auctions/index.html", {
         "listings": listings,
-        "watchlist_count": utils.get_watchlist_count(request) 
+        "watchlist_count": utils.get_watchlist_count(request),
+        "num_watchers": num_watchers
     })
 
 def login_view(request):
@@ -151,9 +153,11 @@ def categories(request):
 
 def listing_by_category(request, category):
     listings = Listing.objects.filter(category=category).exclude(active_listing="NO")
+    num_watchers = Watchlist.objects.values('item').annotate(Count('item'))
     return render(request, 'auctions/index.html', {
         'listings': listings,
-        'watchlist_count': utils.get_watchlist_count(request)
+        'watchlist_count': utils.get_watchlist_count(request),
+        "num_watchers": num_watchers
     })
 
 @login_required()

@@ -8,7 +8,13 @@
                 {% if listing.watchlist == "YES" %}
                     <li class="listing-item-gray">
                         <a href="{% url 'listing_page' listing_id=listing.id %}">
-                        <span class="watchlist">Watchlist</span></a></li>
+                        <span class="watchlist">Watchlist</span>
+                        {% for v in num_watchers %}
+                            {% if v.item == listing.pk %}
+                                {{v.item__count}} people
+                            {% endif %}
+                        {% endfor %}
+                    </a></li>
                 {% endif %}
 
                 {% if listing.photo %}

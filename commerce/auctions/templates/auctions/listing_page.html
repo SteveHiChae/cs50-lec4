@@ -22,8 +22,8 @@
             <form action="{% url 'create_bid_comment_watchlist' listing_id=listing.id %}" method="POST">
                 {% csrf_token %}
                 <ul>
-                    <li class="listing-item">Price: ${{listing.price}}</li>
-                    <li>Starting bid: <strong>US ${{listing.starting_bid}}</strong></li>
+                    <li>Price: <strong class='price'>${{listing.price}}</strong></li>
+                    <li>Starting bid: <strong class='price'>US ${{listing.starting_bid}}</strong></li>
                     <li>[{{number_of_bids}}] bid(s) so far. {{current_bidder}}</li><br>
                         <input type="number" name="bid" id="bid" 
                             min="{{bid_price}}" max="999999" step="0.01" 

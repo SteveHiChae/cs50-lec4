@@ -114,3 +114,7 @@ select, input[type='text'], input[type='file'], input[type='number'] {
 .custom {
     width: 300px !important
 }
+
+.price {
+    font-size: 1.5rem;
+}

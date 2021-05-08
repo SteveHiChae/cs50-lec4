@@ -12,6 +12,9 @@ def get_watchlist_count(request):
 
     return str(watchlist_count)
 
+def get_num_watchers(listing_id):
+    return Weatchlist.objects.filter(item=listing_id).count()
+
 def highest_bid(listing_id):
     listing = Listing.objects.get(pk=listing_id)
     highest_bid = Bid.objects.filter(item=listing).order_by('-price').first()
