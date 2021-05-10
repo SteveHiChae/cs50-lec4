@@ -13,6 +13,7 @@ from .models import *
 from .forms import *
 from . import utils
 from django.contrib import messages
+from django.db.models import Max
 
 def index(request):
     listings = Listing.objects.filter(active_listing="YES")
@@ -183,7 +184,7 @@ def create_listing(request):
             listing = form.save(commit=False)
             listing.listed_by = request.user
             listing.save()
-            messages.success(request, 'Changes successfully saved.')
+            messages.success(request, 'Item successfully saved.')
         else:
             messages.error(request, listing_form.errors) 
 
@@ -207,7 +208,7 @@ def listing_page(request, listing_id):
         bid_price = listing.starting_bid 
     else:
         highest_bid = Bid.objects.filter(item=listing).order_by('-price').first()
-        bid_price = highest_bid.price
+        bid_price = float(highest_bid.price) + 0.1
 
     if request.user.is_authenticated:
         user = User.objects.get(pk=request.user.id)
@@ -244,9 +245,11 @@ def listing_page(request, listing_id):
     # No login user
     else:
         watchlist_count = 0
+        comments = Comment.objects.filter(item=listing)
         return render(request, "auctions/listing_page.html", {
             "listing": listing,
             "bid_price": bid_price,
+            "comments": comments,
             "watchlist_count": watchlist_count
         })
 

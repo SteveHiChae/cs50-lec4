@@ -12,7 +12,7 @@
                         <span class="watchlist">Watchlist</span>
                         {% for v in num_watchers %}
                             {% if v.item == listing.pk %}
-                                <span class="watchers">{{v.item__count}} watchers</span>
+                                {{v.item__count}} people
                             {% endif %}
                         {% endfor %}
                     </a></li>
@@ -38,13 +38,17 @@
                 {% if listing.description is not None %}
                     <li class="listing-item">
                         <a href="{% url 'listing_page' listing_id=listing.id %}">
-                        {{listing.description}}</a></li>
+                        Description: {{listing.description}}</a></li>
                 {% endif %}
 
                 <li class="listing-item">
                     <a href="{% url 'listing_page' listing_id=listing.id %}">
-                         Current bid: <span class='price'>${{ bid_price | max_bid:listing.id }}</span>
-                    </a> </li>
+                    Price: ${{listing.price}}</a></li>
+                    {% for b in bidders %}
+                        {% if listing.id == b.item %}
+                            Bidding Price: ${{ b.price__max }}
+                        {% endif %}
+                    {% endfor %}
                 <li class="listing-item-gray">
                     <a href="{% url 'listing_page' listing_id=listing.id %}">
                     Created {{listing.listing_datetime}}</a></li>

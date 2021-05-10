@@ -58,6 +58,10 @@ img {
     font-style: italic;
 }
 
+.watchers {
+    color: red;
+}
+
 .author {
     color:dodgerblue
 }
