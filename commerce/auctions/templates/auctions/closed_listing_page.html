@@ -24,7 +24,7 @@
                 <li>Starting bid: <strong>US ${{listing.starting_bid}}</strong></li>
                 <hr>
                 <li>Number of bids: <strong>{{number_of_bids}}</strong></li>
-                <li>Highest bid: <strong>US ${{highest_bid.price}}</strong><br> </li>
+                <li>Highest bid: <span class="price">US ${{highest_bid.price}}</span><br> </li>
                 <li>Winner: <strong>{{winner_username}}</strong></li>
                 {% if user.is_authenticated %}
                     {% if user.username == winner_username %}

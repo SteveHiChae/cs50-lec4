@@ -265,13 +265,15 @@ def create_bid_comment_watchlist(request, listing_id):
         if 'place-bid' in request.POST:
             highest_bid = Bid.objects.filter(item=listing).values('price').order_by('-price').first()
             if not highest_bid: # no bidding yet
-                highest_bid = 0
+                highest_bid = listing.starting_bid
             else:
                 highest_bid = highest_bid['price']
 
             bid_price = Decimal(request.POST['bid'])
             if bid_price < highest_bid: 
                 message = "Please enter more than ..." + str(highest_bid)
+                messages.error(request, message) 
+                # return HttpResponseRedirect(reverse('create_listing'))
             else:
                 # bid = Bid.objects.create(price=bid_price, bidder=user, item=listing)
                 bid = Bid(price=bid_price, bidder=user, item=listing)
